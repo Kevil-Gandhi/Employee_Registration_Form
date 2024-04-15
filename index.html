@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Employee Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1> Employee Registration Form</h1>
+
+    <hr>
+
+    <br><br>
+
+    <form action="" method="post" name="emp_form">
+
+        <label for="emp_code"> Employee Code </label>
+        <input type="text" name="emp_code" id="emp_code" oninput="valid_ecode()" onchange="valid_ecode()">
+        <div id="ecode_error"></div> <br><br>
+
+        <label for="emp_name"> Employee Name </label>
+        <input type="text" name="emp_name" id="emp_name" oninput="valid_ename()" onchange="valid_ename()">
+        <div id="ename_error"></div> <br><br>
+
+        <label for="emp_uname"> User Name </label>
+        <input type="text" name="emp_uname" id="emp_uname" oninput="valid_uname()" onchange="valid_uname()">
+        <div id="uname_error"></div> <br><br>
+
+        <label for="emp_password"> password </label>
+        <input type="password" name="emp_password" id="emp_password" oninput="valid_password()"
+            onchange="valid_password()">
+        <div id="pass_error"></div> <br><br>
+
+        <label for="emp_mail"> E mail </label>
+        <input type="text" name="emp_mail" id="emp_mail" oninput="valid_mail()" onchange="valid_mail()">
+        <div id="mail_error"></div> <br><br>
+
+        <label for="gender"> Gender </label>
+        <input type="radio" name="gender" id="male" value="Male" checked="checked"> Male
+        <input type="radio" name="gender" id="female" value="Female"> Female
+        <br><br>
+
+        <label for="department"> Department </label>
+        <select name="department" id="department" onchange="valid_dept()">
+
+            <option value=""> - Select Department - </option>
+            <option value="HR"> HR </option>
+            <option value="Engineering"> Engineering </option>
+            <option value="Planning "> Planning </option>
+            <option value="Marketing"> Marketing </option>
+            <option value="Admin"> Admin </option>
+            <option value="Sales"> Sales </option>
+            <option value="IT"> IT </option>
+
+        </select>
+        <div id="dept_error"></div>
+        <br><br>
+
+        <label for="emp_mob"> Mobile No </label>
+        <input type="text" name="emp_mob" id="emp_mob" oninput="valid_mob()" onchange="valid_mob()">
+        <div id="mob_error"></div> <br><br>
+
+        <label for="emp_sal"> Salary </label>
+        <input type="text" name="emp_sal" id="emp_sal" oninput="valid_sal(); cal_sal()"
+            onchange="valid_sal(); cal_sal()">
+        <div id="sal_error"></div> <br><br>
+
+        <label for="emp_hra"> HRA </label>
+        <input type="text" name="emp_hra" id="emp_hra" oninput="valid_hra(); cal_sal()"
+            onchange="valid_hra(); cal_sal()">
+        <div id="hra_error"></div> <br><br>
+
+        <label for="emp_grs_sal"> Gross Salary </label>
+        <input type="text" name="emp_grs_sal" id="emp_grs_sal" value="0" readonly="readonly">
+        <br><br>
+
+        <label for="emp_tax"> Tax </label>
+        <input type="text" name="emp_tax" id="emp_tax" value="0" readonly="readonly">
+        <br><br>
+
+        <label for="emp_net_sal"> Net Salary </label>
+        <input type="text" name="emp_net_sal" id="emp_net_sal" value="0" readonly="readonly">
+        <br><br><br>
+
+        <input type="checkbox" name="show_store_data" id="show_store_data">
+        <label for="show_store_data"> Show Store Data</label><br><br><br>
+
+        <h2 id="result"></h2>
+
+        <button type="button" onclick="validate_form()"> Submit </button>
+        <input type="reset" onclick="reset_form()" value="Reset">
+        <button type="button" onclick="store_data()"> Store </button>
+        <button type="button" onclick="display_data()"> Display </button>
+
+        <br><br><br><br>
+        <div id="dis_data">
+
+            <table id="dis_tab">
+
+                <thead>
+
+                    <tr>
+                        <th>
+                            Attribute
+                        </th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tab_body">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
