@@ -1,0 +1,60 @@
+h1 {
+    text-align: center;
+}
+
+div {
+    display: inline;
+}
+
+label {
+    font-size: 20px;
+}
+
+input,
+button,
+select {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+#dis_data {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+hr {
+    border: none;
+    border-top: 2px dashed #ccc;
+    margin: 30px 0;
+}
+
+th {
+    background-color: #cd9e9e;
+    text-align: center;
+    font-size: 24px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
